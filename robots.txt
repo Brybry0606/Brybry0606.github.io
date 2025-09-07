@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Empêcher l'indexation des dossiers techniques
+Disallow: /assets/
+Disallow: /.well-known/
+Disallow: /admin/
+Disallow: /tmp/
+
+# Permettre l'accès aux images importantes pour le SEO
+Allow: /assets/author.jpg
+Allow: /assets/favicon.ico
+
+# Empêcher l'indexation des fichiers temporaires et de sauvegarde
+Disallow: /*.tmp$
+Disallow: /*.bak$
+Disallow: /*~$
+
+# Référencer le sitemap
+Sitemap: https://votre-domaine.com/sitemap.xml
+
+# Crawl-delay pour être respectueux des serveurs
+Crawl-delay: 1

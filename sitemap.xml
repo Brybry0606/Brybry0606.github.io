@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <url>
+    <loc>https://votre-domaine.com/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <image:image>
+      <image:loc>https://votre-domaine.com/assets/author.jpg</image:loc>
+      <image:caption>Portrait du photographe professionnel Brybry Photos</image:caption>
+      <image:title>Brybry Photos - Photographe professionnel</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://votre-domaine.com/assets/IMG_0844.jpg</image:loc>
+      <image:caption>Exemple de travail photographique - Portfolio Brybry Photos</image:caption>
+      <image:title>Photographie professionnelle</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://votre-domaine.com/assets/DJI_20250306141947_0028_D.jpg</image:loc>
+      <image:caption>Photographie aérienne par drone - Brybry Photos</image:caption>
+      <image:title>Prise de vue aérienne par drone</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://votre-domaine.com/assets/IMG_1852.jpg</image:loc>
+      <image:caption>Photographie professionnelle - Portfolio Brybry Photos</image:caption>
+      <image:title>Photographie créative</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://votre-domaine.com/#about</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://votre-domaine.com/#services</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://votre-domaine.com/#gallery</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://votre-domaine.com/#testimonial</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://votre-domaine.com/#contact</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Brybry Photos</title>
+    <meta name="description" content="Photographe professionnel spécialisé en mariages, portraits, photographie corporate et prises de vues aériennes par drone. Capturer vos moments précieux avec créativité et passion.">
+    <meta name="keywords" content="photographe, photographie, mariage, portrait, drone, corporate, événement, professionnel, DJI Air 3S, séance photo">
+    <meta name="author" content="Brybry Photos">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Brybry Photos - Photographe Professionnel">
+    <meta property="og:description" content="Photographe professionnel spécialisé en mariages, portraits et photographie drone. Découvrez mon univers créatif et mes services sur-mesure.">
+    <meta property="og:url" content="https://votre-domaine.com">
+    <meta property="og:site_name" content="Brybry Photos">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brybry Photos - Photographe Professionnel">
+    <meta name="twitter:description" content="Photographe professionnel spécialisé en mariages, portraits et photographie drone.">
+
+    <!--Preload image-->
+    <link rel="preload" href="./assets/IMG_0844.jpg" as="image">
+    <link rel="preload" href="./assets/DJI_20250306141947_0028_D.jpg" as="image">
+    <link rel="preload" href="./assets/IMG_1852.jpg" as="image">
+    <link rel="preload" href="./assets/IMG_1822.jpg" as="image">
+    <link rel="preload" href="./assets/IMG_7608.jpg" as="image">
+    <link rel="preload" href="./assets/IMG_5157.jpg" as="image">
+    <link rel="preload" href="./assets/author.jpeg" as="image">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://votre-domaine.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon.ico">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Brybry Photos",
+        "description": "Photographe professionnel spécialisé en mariages, portraits, photographie corporate et prises de vues aériennes par drone",
+        "serviceType": "Photographie",
+        "provider": {
+            "@type": "Person",
+            "name": "Brybry Photos"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "France"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services de Photographie",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Photographie de Mariage",
+                        "description": "Immortalisez le plus beau jour de votre vie avec des photos pleines d'émotion et de poésie"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Portraits Professionnels",
+                        "description": "Des portraits authentiques qui révèlent votre personnalité et votre essence unique"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Photographie Corporate",
+                        "description": "Valorisez votre image professionnelle avec des photos corporate de qualité"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Photographie par Drone",
+                        "description": "Prises de vues aériennes spectaculaires avec du matériel professionnel DJI Air 3S"
+                    }
+                }
+            ]
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Service Client",
+            "email": "contact@brybryphotos.fr",
+            "telephone": "+33123456789"
+        },
+        "sameAs": [
+            "https://instagram.com/brybryphotos",
+            "https://linkedin.com/in/brybryphotos"
+        ]
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loader.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInPulse 2s ease-in-out;
+        }
+
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #333333;
+            border-top: 3px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeInPulse {
+            0% { opacity: 0; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #cccccc;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #cccccc;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section with Parallax */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            animation: fadeInUp 1s ease;
+            position: relative;
+            z-index: 4;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #cccccc;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666666;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #cccccc;
+        }
+
+        .about-text h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 5rem 0;
+            overflow: hidden;
+        }
+
+        .gallery-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .gallery-slider {
+            overflow: hidden;
+            width: 100%;
+            height: 500px;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        /*Responsive*/
+        @media (max-width: 768px) {
+            .gallery-slider {
+                height: 300px;
+                margin: 0 1rem;
+            }
+            
+            .gallery-slide {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .gallery-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .gallery-slide {
+            flex: 0 0 100%;
+            height: 100%;
+            background: #1a1a1a;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666666;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            flex: 0 0 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+            will-change: transform;
+        }
+
+        .gallery-slide:hover {
+            transform: scale(1.02);
+            will-change: auto;
+        }
+
+        .gallery-slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-slide:hover::after {
+            opacity: 1;
+        }
+
+        /* Gallery indicators */
+        .gallery-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #333333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: #ffffff;
+            transform: scale(1.2);
+        }
+
+        .indicator:hover {
+            background: #cccccc;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #111111;
+            padding: 0;
+            border-radius: 10px;
+            overflow-x: hidden;
+            position: relative;
+            height: 220px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: var(--bg-image);
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1;
+            will-change: opacity;
+        }
+
+        .service-card:hover::before {
+            opacity: 0.3;
+        }
+
+        .service-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background: #111111;
+            transition: transform 0.4s ease;
+        }
+
+        .service-content h3 {
+            margin-top: 3rem;
+        }
+
+        .service-content p {
+            margin-bottom: 3rem;
+        }
+
+        .service-card:hover .service-content {
+            transform: translateX(90%);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: #0a0a0a;
+            padding: 5rem 2rem;
+        }
+
+        .testimonials-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: #111111;
+            padding: 2rem;
+            border-radius: 15px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: #333333;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #333333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info span {
+            color: #888888;
+            font-size: 0.9rem;
+        }
+
+        .stars {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+        .contact {
+            background: #050505;
+            padding: 5rem 2rem;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 50px;  
+            height: 50px;
+            display: flex;    
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            background: transparent; 
+            overflow: hidden;     
+            border-radius: 8px;    
+        }
+
+        .social_logo {
+            max-width: 90%;        
+            max-height: 90%;
+            object-fit: contain;     
+            display: block;
+        }
+
+        .contact-item a {
+            position: relative;
+            color: #cccccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-style: normal;
+        }
+
+        .contact-item a:hover {
+            color: #ffffff;
+        }
+
+        .contact-item a::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: -2px;
+            width: 100%; height: 2px;
+            background: currentColor;
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform .25s ease;
+        }
+
+        .contact-item a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .contact-form {
+            background: #111111;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #cccccc;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: #222222;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            transition: background 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: #333333;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* Footer */
+        footer {
+            background: #000000;
+            text-align: center;
+            padding: 2rem;
+            color: #666666;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: flex;
+                position: fixed;
+                top: 70px;
+                right: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                padding: 2rem;
+                text-align: center;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: opacity 0.4s ease, visibility 0.4s ease;
+            }
+
+            .nav-links.active {
+                display: flex;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-video {
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                object-position: center;
+            }
+    
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .about-image {
+                height: 250px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">Brybry Photos</div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Navigation principale">
+        <div class="nav-container">
+            <a href="#home" class="logo" aria-label="Retour à l'accueil">Brybry Photos</a>
+            <ul class="nav-links">
+                <li><a href="#home" aria-label="Aller à la section Accueil">Accueil</a></li>
+                <li><a href="#about" aria-label="Aller à la section À propos">À propos</a></li>
+                <li><a href="#gallery" aria-label="Aller à la section Galerie">Galerie</a></li>
+                <li><a href="#services" aria-label="Aller à la section Services">Services</a></li>
+                <li><a href="#testimonial" aria-label="Aller à la section Avis">Avis</a></li>
+                <li><a href="#contact" aria-label="Aller à la section Contact">Contact</a></li>
+            </ul>
+            <div class="burger" aria-label="Menu mobile" role="button" tabindex="0">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="./assets/hero-video.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+        <div class="hero-content">
+            <h1>Brybry Photos</h1>
+            <p>Capturer l'essence de vos moments précieux avec créativité et passion</p>
+            <a href="#contact" class="cta-button" aria-label="Me contacter pour un projet photo">Me Contacter</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title" class="section-title fade-in">À Propos</h2>
+        <div class="about-content fade-in">
+            <img src="./assets/author.jpg" class="about-image" role="img" aria-label="Portrait du photographe Brybry Photos">
+            <div class="about-text">
+                <h3>Passionné par l'image depuis toujours</h3>
+                <p>Bienvenue dans mon univers photographique. Depuis plusieurs années, je me consacre à l'art de capturer les émotions et les instants uniques. Mon approche se base sur l'authenticité et la créativité, cherchant toujours à révéler la beauté naturelle de chaque moment.</p>
+                <p>Que ce soit pour immortaliser votre mariage, créer des portraits expressifs ou sublimer vos projets professionnels, je mets tout mon savoir-faire à votre service pour des images qui vous ressemblent parfaitement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery" aria-labelledby="gallery-title">
+        <h2 id="gallery-title" class="section-title fade-in">Mes réalisations</h2>
+        <div class="gallery-container fade-in">
+            <div class="gallery-slider" role="region" aria-label="Galerie de photos" aria-live="polite">
+                <div class="gallery-track">
+                    <img class="gallery-slide" src="./assets/IMG_0844.jpg" alt="Photo 1">
+                    <img class="gallery-slide" src="./assets/DJI_20250306141947_0028_D.jpg" alt="Photo 2">
+                    <img class="gallery-slide" src="./assets/IMG_1852.jpg" alt="Photo 3">
+                    <img class="gallery-slide" src="./assets/IMG_2262.jpg" alt="Photo 4">
+                    <img class="gallery-slide" src="./assets/IMG_2668.jpg" alt="Photo 5">
+                    <img class="gallery-slide" src="./assets/IMG_1710.jpg" alt="Photo 6">
+                </div>
+            </div>
+            <div class="gallery-indicators" role="tablist" aria-label="Sélecteur de photos">
+                <div class="indicator active" data-slide="0" role="tab" aria-label="Photo 1" tabindex="0"></div>
+                <div class="indicator" data-slide="1" role="tab" aria-label="Photo 2" tabindex="0"></div>
+                <div class="indicator" data-slide="2" role="tab" aria-label="Photo 3" tabindex="0"></div>
+                <div class="indicator" data-slide="3" role="tab" aria-label="Photo 4" tabindex="0"></div>
+                <div class="indicator" data-slide="4" role="tab" aria-label="Photo 5" tabindex="0"></div>
+                <div class="indicator" data-slide="5" role="tab" aria-label="Photo 6" tabindex="0"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" aria-labelledby="services-title">
+        <h2 id="services-title" class="section-title fade-in">Mes Services Photographiques</h2>
+        <div class="services-grid fade-in">
+
+            <article class="service-card" data-image="./assets/IMG_0414.png">
+                <div class="service-content">
+                    <h3>Portraits Professionnels</h3>
+                    <p>Des portraits authentiques qui révèlent votre personnalité et votre essence unique. Séances individuelles ou en famille.</p>
+                </div>
+            </article>
+
+            <article class="service-card" data-image="./assets/IMG_0704.jpg">
+                <div class="service-content">
+                    <h3>Photographie d’entreprise</h3>
+                    <p>Valorisez votre image professionnelle avec des photos d’entreprise de qualité. Portraits d'équipe, événements d'entreprise.</p>
+                </div>
+            </article>
+
+            <article class="service-card" data-image="./assets/DJI_20250303171518_0035_D.jpg">
+                <div class="service-content">
+                    <h3>Photographie par Drone</h3>
+                    <p>Prises de vues aériennes spectaculaires avec du matériel professionnel. Perspectives uniques garanties pour tous vos projets.</p>
+                </div>
+            </article>
+
+            <article class="service-card" data-image="./assets/IMG_1052.jpg">
+                <div class="service-content">
+                    <h3>Photographie d'Événements</h3>
+                    <p>Capturer l'atmosphère et les moments forts de vos événements privés ou professionnels. Soirées, inaugurations, célébrations, mariages.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonial" class="testimonials" aria-labelledby="testimonials-title">
+        <div class="testimonials-container">
+            <h2 id="testimonials-title" class="section-title fade-in">Ce que disent mes clients</h2>
+            <div class="testimonials-grid fade-in">
+                <article class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        Travail très pro, belles compositions et respect des délais. Je recommande sans hésiter.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Maxime L.</h4>
+                            <span>Juin 2024</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        Sérieux, ponctuel et créatif. Le rendu des clichés est superbe, au-dessus de mes attentes.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">N</div>
+                        <div class="author-info">
+                            <h4>Nathan R.</h4>
+                            <span>Mai 2025</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        Magnifique perspective grâce au drone, je recommande.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Stéphanie N.</h4>
+                            <span>Mars 2024</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title fade-in">Me Contacter</h2>
+        <div class="contact-content fade-in">
+            <div class="contact-info">
+                <h3>Parlons de votre projet photographique</h3>
+                <p style="margin-bottom: 2rem; color: #cccccc; line-height: 1.6;">
+                    Contactez-moi directement via vos moyens de communication préférés. 
+                    Je réponds rapidement et je serais ravi de discuter de votre projet photo.
+                </p>
+                <address>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true"><img alt="Logo email" class="social_logo" src="./assets/email_logo.png"></div>
+                        <a href="mailto:bryan.bigneron06@gmail.com" aria-label="M'envoyer un email">Me contacter via email</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true"><img alt="Logo téléphone" class="social_logo" src="./assets/call.png "></div>
+                        <a href="tel:+32487484872" aria-label="M'appeler">+32 487 48 48 72</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true"><img alt="Logo whatsapp" class="social_logo" src="./assets/logo_whatsapp.png"></div>
+                        <a href="https://wa.me/32487484872" target="_blank" rel="noopener noreferrer" aria-label="Me contacter via WhatsApp">Me contacter via WhatsApp</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true"><img alt="Logo instagram" class="social_logo" src="./assets/instagram_logo.png"></div>
+                        <a href="https://www.instagram.com/brybry_photos/" target="_blank" rel="noopener noreferrer" aria-label="Me suivre sur Instagram">Me suivre sur Instagram</a>
+                    </div>
+                </address>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p>&copy; 2025 Brybry Photos | Photographe Professionnel. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+//===========================================================+
+//      Loader
+//===========================================================+
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.loader');
+            setTimeout(() => {
+                loader.classList.add('fade-out');
+            }, 1000); // Show loader for 1 second minimum
+        });
+
+
+//===========================================================+
+//      Perfs optimisation
+//===========================================================+
+        function preloadAllAssets() {
+            const allImages = new Set();
+            
+            document.querySelectorAll('img').forEach(img => {
+                if (img.src) allImages.add(img.src);
+            });
+            
+            document.querySelectorAll('[data-image]').forEach(el => {
+                allImages.add(el.dataset.image);
+            });
+            
+            const additionalImages = [
+                './assets/author.jpeg',
+                './assets/email_logo.png',
+                './assets/call.png',
+                './assets/logo_whatsapp.png',
+                './assets/instagram_logo.png'
+            ];
+            additionalImages.forEach(src => allImages.add(src));
+            
+            allImages.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        }
+
+        preloadAllAssets() 
+        if ('loading' in HTMLImageElement.prototype) {
+            document.querySelectorAll('img').forEach(img => {
+                img.loading = 'lazy';
+            });
+        }
+
+        const servicesObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              document.querySelectorAll('.service-card[data-image]').forEach(card => {
+                const img = new Image();
+                img.onload = () => {
+                  card.style.setProperty('--bg-image', `url(${card.dataset.image})`);
+                  card.classList.add('preloaded');
+                };
+                img.src = card.dataset.image;
+              });
+              servicesObserver.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '200px' });
+
+        servicesObserver.observe(document.getElementById('services'));
+
+
+//===========================================================+
+//      Website animation
+//===========================================================+
+// Parallaxe animation       
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const scrolled = window.pageYOffset;
+                    const heroVideo = document.querySelector('.hero-video');
+                    const rate = scrolled * -0.2;
+                    
+                    if (heroVideo) {
+                        heroVideo.style.transform = `translateY(${rate}px)`;
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu after click
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Service animation
+        document.querySelectorAll('.service-card').forEach(card => {
+            const imageSrc = card.dataset.image;
+            card.style.setProperty('--bg-image', `url(${imageSrc})`);
+            
+            let isToggled = false;
+            
+            card.addEventListener('click', (e) => {
+                e.stopPropagation();
+
+                if (window.innerWidth <= 768) {
+                    const serviceContent = card.querySelector('.service-content');
+                    
+                    if (isToggled) {
+                        serviceContent.style.transform = 'translateX(0%)';
+                        isToggled = false;
+                    } else {
+                        serviceContent.style.transform = 'translateX(90%)';
+                        isToggled = true;
+                    }
+                }
+            });
+            
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    const serviceContent = card.querySelector('.service-content');
+                    serviceContent.style.transform = '';
+                    isToggled = false;
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+
+//===========================================================+
+//      Gallery slide avec préchargement
+//===========================================================+
+        // Préchargement des images
+        const galleryImages = [
+            './assets/IMG_0844.jpg',
+            './assets/DJI_20250306141947_0028_D.jpg',
+            './assets/IMG_1852.jpg',
+            './assets/IMG_2262.jpg',
+            './assets/IMG_2668.jpg',
+            './assets/IMG_1710.jpg'
+        ];
+        
+        let preloadedImages = new Set();
+        
+        function preloadImage(src) {
+            if (preloadedImages.has(src)) return;
+            const img = new Image();
+            img.onload = () => preloadedImages.add(src);
+            img.src = src;
+        }
+        
+        preloadImage(galleryImages[0]);
+        
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.gallery-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
+        let slideInterval;
+        
+        function showSlide(index) {
+            const track = document.querySelector('.gallery-track');
+            track.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update indicators
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            indicators[index].classList.add('active');
+            
+            currentSlide = index;
+            
+            // Précharger les 2 prochaines images
+            const nextIndex = (index + 1) % totalSlides;
+            const nextNextIndex = (index + 2) % totalSlides;
+            preloadImage(galleryImages[nextIndex]);
+            preloadImage(galleryImages[nextNextIndex]);
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+        
+        function startSlideshow() {
+            slideInterval = setInterval(nextSlide, 4000);
+        }
+        
+        function pauseSlideshow() {
+            clearInterval(slideInterval);
+        }
+        
+        // Manual navigation with indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                pauseSlideshow();
+                showSlide(index);
+                setTimeout(startSlideshow, 6000);
+            });
+        });
+        
+        // Pause on hover, resume on leave
+        const gallerySlider = document.querySelector('.gallery-slider');
+        gallerySlider.addEventListener('mouseenter', pauseSlideshow);
+        gallerySlider.addEventListener('mouseleave', startSlideshow);
+        
+        const galleryObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    galleryImages.forEach(src => preloadImage(src));
+                    galleryObserver.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '100px' });
+        
+        galleryObserver.observe(document.getElementById('gallery'));
+        
+        // Start the slideshow
+        startSlideshow();
+
+
+//===========================================================+
+//      Navigation scroll style 
+//===========================================================+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(0, 0, 0, 0.98)';
+            } else {
+                nav.style.background = 'rgba(0, 0, 0, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
