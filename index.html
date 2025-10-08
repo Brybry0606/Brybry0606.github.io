@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
     <!-- SEO Meta Tags -->
     <title>Brybry Photos</title>
     <meta name="description" content="Photographe professionnel spécialisé en mariages, portraits, photographie corporate et prises de vues aériennes par drone. Capturer vos moments précieux avec créativité et passion.">
@@ -15,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Brybry Photos - Photographe Professionnel">
     <meta property="og:description" content="Photographe professionnel spécialisé en mariages, portraits et photographie drone. Découvrez mon univers créatif et mes services sur-mesure.">
-    <meta property="og:url" content="https://votre-domaine.com">
+    <meta property="og:url" content="https://brybry0606.github.io">
     <meta property="og:site_name" content="Brybry Photos">
     <meta property="og:locale" content="fr_FR">
     
@@ -23,18 +26,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Brybry Photos - Photographe Professionnel">
     <meta name="twitter:description" content="Photographe professionnel spécialisé en mariages, portraits et photographie drone.">
-
-    <!--Preload image-->
-    <link rel="preload" href="./assets/IMG_0844.jpg" as="image">
-    <link rel="preload" href="./assets/DJI_20250306141947_0028_D.jpg" as="image">
-    <link rel="preload" href="./assets/IMG_1852.jpg" as="image">
-    <link rel="preload" href="./assets/IMG_1822.jpg" as="image">
-    <link rel="preload" href="./assets/IMG_7608.jpg" as="image">
-    <link rel="preload" href="./assets/IMG_5157.jpg" as="image">
-    <link rel="preload" href="./assets/author.jpeg" as="image">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://votre-domaine.com">
+    <link rel="canonical" href="https://brybry0606.github.io">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
@@ -45,67 +39,185 @@
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Brybry Photos",
-        "description": "Photographe professionnel spécialisé en mariages, portraits, photographie corporate et prises de vues aériennes par drone",
-        "serviceType": "Photographie",
-        "provider": {
-            "@type": "Person",
-            "name": "Brybry Photos"
-        },
-        "areaServed": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://brybry0606.github.io/#business",
+          "name": "Brybry Photos",
+          "description": "Photographe professionnel spécialisé en mariages, portraits, photographie corporate et prises de vues aériennes par drone.",
+          "url": "https://brybry0606.github.io",
+          "logo": "https://brybry0606.github.io/assets/favicon.ico",
+          "image": [
+            "https://brybry0606.github.io/assets/0.jpg",
+            "https://brybry0606.github.io/assets/1.jpg",
+            "https://brybry0606.github.io/assets/2.jpg"
+          ],
+          "telephone": "+32487484872",
+          "email": "bryan.bigneron06@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bastogne",
+            "addressRegion": "Wallonie",
+            "addressCountry": "BE"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "50.0039",
+            "longitude": "5.7206"
+          },
+          "priceRange": "$$",
+          "sameAs": [
+            "https://www.instagram.com/brybry_photos/",
+            "https://wa.me/32487484872"
+          ],
+          "areaServed": {
             "@type": "Country",
-            "name": "France"
-        },
-        "hasOfferCatalog": {
+            "name": "Belgium"
+          },
+          "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Services de Photographie",
+            "name": "Services Photographiques",
             "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Photographie de Mariage",
-                        "description": "Immortalisez le plus beau jour de votre vie avec des photos pleines d'émotion et de poésie"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Portraits Professionnels",
-                        "description": "Des portraits authentiques qui révèlent votre personnalité et votre essence unique"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Photographie Corporate",
-                        "description": "Valorisez votre image professionnelle avec des photos corporate de qualité"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Photographie par Drone",
-                        "description": "Prises de vues aériennes spectaculaires avec du matériel professionnel DJI Air 3S"
-                    }
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Photographie animalière",
+                  "description": "Redécouvrez la faune à travers des photographies qui allient précision, émotion et authenticité.",
+                  "serviceType": "Wildlife Photography"
                 }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Photographie d'entreprise",
+                  "description": "Valorisez votre image professionnelle avec des photos d'entreprise de qualité. Portraits d'équipe, événements d'entreprise.",
+                  "serviceType": "Corporate Photography"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Photographie par Drone",
+                  "description": "Prises de vues aériennes spectaculaires avec du matériel professionnel. Perspectives uniques garanties pour tous vos projets.",
+                  "serviceType": "Aerial Drone Photography"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Photographie d'Événements",
+                  "description": "Capturer l'atmosphère et les moments forts de vos événements privés ou professionnels. Soirées, inaugurations, célébrations, mariages.",
+                  "serviceType": "Event Photography"
+                }
+              }
             ]
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "3",
+            "bestRating": "5",
+            "worstRating": "5"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Maxime L."
+              },
+              "datePublished": "2024-06",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Travail très pro, belles compositions et respect des délais. Je recommande sans hésiter."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Nathan R."
+              },
+              "datePublished": "2025-05",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Sérieux, ponctuel et créatif. Le rendu des clichés est superbe, au-dessus de mes attentes."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Stéphanie N."
+              },
+              "datePublished": "2024-03",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Magnifique perspective grâce au drone, je recommande."
+            }
+          ]
         },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Service Client",
-            "email": "contact@brybryphotos.fr",
-            "telephone": "+33123456789"
+        {
+          "@type": "WebSite",
+          "@id": "https://brybry0606.github.io/#website",
+          "url": "https://brybry0606.github.io",
+          "name": "Brybry Photos",
+          "description": "Site officiel de Brybry Photos - Photographe professionnel",
+          "publisher": {
+            "@id": "https://brybry0606.github.io/#business"
+          },
+          "inLanguage": "fr-FR"
         },
-        "sameAs": [
-            "https://instagram.com/brybryphotos",
-            "https://linkedin.com/in/brybryphotos"
-        ]
+        {
+          "@type": "WebPage",
+          "@id": "https://brybry0606.github.io/#webpage",
+          "url": "https://brybry0606.github.io",
+          "name": "Brybry Photos - Photographe Professionnel",
+          "isPartOf": {
+            "@id": "https://brybry0606.github.io/#website"
+          },
+          "about": {
+            "@id": "https://brybry0606.github.io/#business"
+          },
+          "description": "Photographe professionnel spécialisé en mariages, portraits, photographie corporate et prises de vues aériennes par drone. Capturer vos moments précieux avec créativité et passion.",
+          "inLanguage": "fr-FR"
+        },
+        {
+          "@type": "ImageGallery",
+          "name": "Galerie Photos Brybry Photos",
+          "description": "Portfolio de réalisations photographiques",
+          "image": [
+            "https://brybry0606.github.io/assets/0.jpg",
+            "https://brybry0606.github.io/assets/1.jpg",
+            "https://brybry0606.github.io/assets/2.jpg",
+            "https://brybry0606.github.io/assets/3.jpg",
+            "https://brybry0606.github.io/assets/4.jpg",
+            "https://brybry0606.github.io/assets/5.jpg",
+            "https://brybry0606.github.io/assets/6.jpg",
+            "https://brybry0606.github.io/assets/7.jpg",
+            "https://brybry0606.github.io/assets/8.jpg",
+            "https://brybry0606.github.io/assets/9.jpg",
+            "https://brybry0606.github.io/assets/10.jpg",
+            "https://brybry0606.github.io/assets/11.jpg",
+            "https://brybry0606.github.io/assets/12.jpg",
+            "https://brybry0606.github.io/assets/13.jpg",
+            "https://brybry0606.github.io/assets/14.jpg",
+            "https://brybry0606.github.io/assets/15.jpg"
+          ]
+        }
+      ]
     }
     </script>
     <style>
@@ -347,7 +459,7 @@
         /* About Section */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: auto 2fr;
             gap: 4rem;
             align-items: center;
         }
@@ -865,8 +977,8 @@
 
             .about-image {
                 height: 250px;
-                width: 100%;
-                object-fit: cover;
+                width: auto;
+                object-fit: contain;
             }
         }
 
@@ -902,7 +1014,7 @@
 
     <!-- Hero Section -->
     <header id="home" class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
+        <video preload="auto" poster="./assets/hero-poster.jpg" class="hero-video" autoplay muted loop playsinline>
             <source src="./assets/hero-video.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture de vidéos.
         </video>
@@ -932,21 +1044,41 @@
         <div class="gallery-container fade-in">
             <div class="gallery-slider" role="region" aria-label="Galerie de photos" aria-live="polite">
                 <div class="gallery-track">
-                    <img class="gallery-slide" src="./assets/IMG_0844.jpg" alt="Photo 1">
-                    <img class="gallery-slide" src="./assets/DJI_20250306141947_0028_D.jpg" alt="Photo 2">
-                    <img class="gallery-slide" src="./assets/IMG_1852.jpg" alt="Photo 3">
-                    <img class="gallery-slide" src="./assets/IMG_2262.jpg" alt="Photo 4">
-                    <img class="gallery-slide" src="./assets/IMG_2668.jpg" alt="Photo 5">
-                    <img class="gallery-slide" src="./assets/IMG_1710.jpg" alt="Photo 6">
+                    <img class="gallery-slide" src="./assets/0.jpg" alt="Photo 0">
+                    <img class="gallery-slide" src="./assets/1.jpg" alt="Photo 1">
+                    <img class="gallery-slide" src="./assets/2.jpg" alt="Photo 2">
+                    <img class="gallery-slide" src="./assets/3.jpg" alt="Photo 3">
+                    <img class="gallery-slide" src="./assets/4.jpg" alt="Photo 4">
+                    <img class="gallery-slide" src="./assets/5.jpg" alt="Photo 5">
+                    <img class="gallery-slide" src="./assets/6.jpg" alt="Photo 6">
+                    <img class="gallery-slide" src="./assets/7.jpg" alt="Photo 7">
+                    <img class="gallery-slide" src="./assets/8.jpg" alt="Photo 8">
+                    <img class="gallery-slide" src="./assets/9.jpg" alt="Photo 9">
+                    <img class="gallery-slide" src="./assets/10.jpg" alt="Photo 10">
+                    <img class="gallery-slide" src="./assets/11.jpg" alt="Photo 11">
+                    <img class="gallery-slide" src="./assets/12.jpg" alt="Photo 12">
+                    <img class="gallery-slide" src="./assets/13.jpg" alt="Photo 13">
+                    <img class="gallery-slide" src="./assets/14.jpg" alt="Photo 14">
+                    <img class="gallery-slide" src="./assets/15.jpg" alt="Photo 15">
                 </div>
             </div>
             <div class="gallery-indicators" role="tablist" aria-label="Sélecteur de photos">
-                <div class="indicator active" data-slide="0" role="tab" aria-label="Photo 1" tabindex="0"></div>
-                <div class="indicator" data-slide="1" role="tab" aria-label="Photo 2" tabindex="0"></div>
-                <div class="indicator" data-slide="2" role="tab" aria-label="Photo 3" tabindex="0"></div>
-                <div class="indicator" data-slide="3" role="tab" aria-label="Photo 4" tabindex="0"></div>
-                <div class="indicator" data-slide="4" role="tab" aria-label="Photo 5" tabindex="0"></div>
-                <div class="indicator" data-slide="5" role="tab" aria-label="Photo 6" tabindex="0"></div>
+                <div class="indicator active" data-slide="0" role="tab" aria-label="Photo 0" tabindex="0"></div>
+                <div class="indicator" data-slide="1" role="tab" aria-label="Photo 1" tabindex="0"></div>
+                <div class="indicator" data-slide="2" role="tab" aria-label="Photo 2" tabindex="0"></div>
+                <div class="indicator" data-slide="3" role="tab" aria-label="Photo 3" tabindex="0"></div>
+                <div class="indicator" data-slide="4" role="tab" aria-label="Photo 4" tabindex="0"></div>
+                <div class="indicator" data-slide="5" role="tab" aria-label="Photo 5" tabindex="0"></div>
+                <div class="indicator" data-slide="6" role="tab" aria-label="Photo 6" tabindex="0"></div>
+                <div class="indicator" data-slide="7" role="tab" aria-label="Photo 7" tabindex="0"></div>
+                <div class="indicator" data-slide="8" role="tab" aria-label="Photo 8" tabindex="0"></div>
+                <div class="indicator" data-slide="9" role="tab" aria-label="Photo 9" tabindex="0"></div>
+                <div class="indicator" data-slide="10" role="tab" aria-label="Photo 10" tabindex="0"></div>
+                <div class="indicator" data-slide="11" role="tab" aria-label="Photo 11" tabindex="0"></div>
+                <div class="indicator" data-slide="12" role="tab" aria-label="Photo 12" tabindex="0"></div>
+                <div class="indicator" data-slide="13" role="tab" aria-label="Photo 13" tabindex="0"></div>
+                <div class="indicator" data-slide="14" role="tab" aria-label="Photo 14" tabindex="0"></div>
+                <div class="indicator" data-slide="15" role="tab" aria-label="Photo 15" tabindex="0"></div>
             </div>
         </div>
     </section>
@@ -956,28 +1088,28 @@
         <h2 id="services-title" class="section-title fade-in">Mes Services Photographiques</h2>
         <div class="services-grid fade-in">
 
-            <article class="service-card" data-image="./assets/IMG_0414.png">
+            <article class="service-card" data-image="./assets/S1.jpg">
                 <div class="service-content">
-                    <h3>Portraits Professionnels</h3>
-                    <p>Des portraits authentiques qui révèlent votre personnalité et votre essence unique. Séances individuelles ou en famille.</p>
+                    <h3>Photographie animalière</h3>
+                    <p>Redécouvrez la faune à travers des photographies qui allient précision, émotion et authenticité.</p>
                 </div>
             </article>
 
-            <article class="service-card" data-image="./assets/IMG_0704.jpg">
+            <article class="service-card" data-image="./assets/S2.jpg">
                 <div class="service-content">
                     <h3>Photographie d’entreprise</h3>
                     <p>Valorisez votre image professionnelle avec des photos d’entreprise de qualité. Portraits d'équipe, événements d'entreprise.</p>
                 </div>
             </article>
 
-            <article class="service-card" data-image="./assets/DJI_20250303171518_0035_D.jpg">
+            <article class="service-card" data-image="./assets/S3.jpg">
                 <div class="service-content">
                     <h3>Photographie par Drone</h3>
                     <p>Prises de vues aériennes spectaculaires avec du matériel professionnel. Perspectives uniques garanties pour tous vos projets.</p>
                 </div>
             </article>
 
-            <article class="service-card" data-image="./assets/IMG_1052.jpg">
+            <article class="service-card" data-image="./assets/S4.jpg">
                 <div class="service-content">
                     <h3>Photographie d'Événements</h3>
                     <p>Capturer l'atmosphère et les moments forts de vos événements privés ou professionnels. Soirées, inaugurations, célébrations, mariages.</p>
@@ -1099,7 +1231,7 @@
             });
             
             const additionalImages = [
-                './assets/author.jpeg',
+                './assets/author.jpg',
                 './assets/email_logo.png',
                 './assets/call.png',
                 './assets/logo_whatsapp.png',
@@ -1240,12 +1372,22 @@
 //===========================================================+
         // Préchargement des images
         const galleryImages = [
-            './assets/IMG_0844.jpg',
-            './assets/DJI_20250306141947_0028_D.jpg',
-            './assets/IMG_1852.jpg',
-            './assets/IMG_2262.jpg',
-            './assets/IMG_2668.jpg',
-            './assets/IMG_1710.jpg'
+            './assets/0.jpg',
+            './assets/1.jpg',
+            './assets/2.jpg',
+            './assets/3.jpg',
+            './assets/4.jpg',
+            './assets/5.jpg',
+            './assets/6.jpg',
+            './assets/7.jpg',
+            './assets/8.jpg',
+            './assets/9.jpg',
+            './assets/10.jpg',
+            './assets/11.jpg',
+            './assets/12.jpg',
+            './assets/13.jpg',
+            './assets/14.jpg',
+            './assets/15.jpg'
         ];
         
         let preloadedImages = new Set();
@@ -1257,16 +1399,14 @@
             img.src = src;
         }
         
-        preloadImage(galleryImages[0]);
-        
         let currentSlide = 0;
         const slides = document.querySelectorAll('.gallery-slide');
         const indicators = document.querySelectorAll('.indicator');
         const totalSlides = slides.length;
         let slideInterval;
-        
+        const track = document.querySelector('.gallery-track');
+
         function showSlide(index) {
-            const track = document.querySelector('.gallery-track');
             track.style.transform = `translateX(-${index * 100}%)`;
             
             // Update indicators
@@ -1286,29 +1426,20 @@
             currentSlide = (currentSlide + 1) % totalSlides;
             showSlide(currentSlide);
         }
-        
-        function startSlideshow() {
-            slideInterval = setInterval(nextSlide, 4000);
-        }
-        
-        function pauseSlideshow() {
-            clearInterval(slideInterval);
-        }
+
+        function prevSlide() {
+               currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+               showSlide(currentSlide);
+           }
         
         // Manual navigation with indicators
         indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => {
-                pauseSlideshow();
                 showSlide(index);
-                setTimeout(startSlideshow, 6000);
             });
         });
         
-        // Pause on hover, resume on leave
-        const gallerySlider = document.querySelector('.gallery-slider');
-        gallerySlider.addEventListener('mouseenter', pauseSlideshow);
-        gallerySlider.addEventListener('mouseleave', startSlideshow);
-        
+        // Lazy loading        
         const galleryObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1319,9 +1450,25 @@
         }, { rootMargin: '100px' });
         
         galleryObserver.observe(document.getElementById('gallery'));
-        
-        // Start the slideshow
-        startSlideshow();
+
+        //touch slide
+        let startX = 0;
+
+        track.addEventListener("pointerdown", (e) => {
+            startX = e.clientX;
+        }, { passive: true });
+
+        track.addEventListener("pointerup", (e) => {
+            const diffX = e.clientX - startX;
+
+            if (Math.abs(diffX)) {
+                if (diffX > 50) {
+                    prevSlide()
+                } else if (diffX < -50) {
+                    nextSlide()
+                }
+            }
+        }, { passive: true });
 
 
 //===========================================================+
