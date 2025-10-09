@@ -979,6 +979,7 @@
                 height: 250px;
                 width: auto;
                 object-fit: contain;
+                margin: 0 auto;
             }
         }
 
@@ -1456,7 +1457,7 @@
 
         track.addEventListener("pointerdown", (e) => {
             startX = e.clientX;
-        }, { passive: true });
+        }, { passive: false });
 
         track.addEventListener("pointerup", (e) => {
             const diffX = e.clientX - startX;
@@ -1468,7 +1469,7 @@
                     nextSlide()
                 }
             }
-        }, { passive: true });
+        }, { passive: false });
 
 
 //===========================================================+
