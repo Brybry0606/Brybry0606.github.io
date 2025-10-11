@@ -1338,6 +1338,13 @@
                         serviceContent.style.transform = 'translateX(90%)';
                         isToggled = true;
                     }
+                    
+                    document.querySelectorAll('.service-card').forEach(otherCard => {
+                        if (otherCard !== card) {
+                            const otherContent = otherCard.querySelector('.service-content');
+                            otherContent.style.transform = 'translateX(0%)';
+                        }
+                    });
                 }
             });
             
