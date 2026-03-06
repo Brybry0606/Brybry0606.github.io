@@ -8,24 +8,34 @@
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
     <!-- SEO Meta Tags -->
-    <title>Brybry Photos</title>
-    <meta name="description" content="Photographe professionnel spécialisé en mariages, portraits, photographie corporate et prises de vues aériennes par drone. Capturer vos moments précieux avec créativité et passion.">
-    <meta name="keywords" content="photographe, photographie, mariage, portrait, drone, corporate, événement, professionnel, DJI Air 3S, séance photo">
+    <title>Brybry Photos – Photographe Professionnel | Brabant Wallon, Belgique</title>
+    <meta name="description" content="Photographe professionnel basé en Brabant Wallon (Belgique). Spécialisé en photographie animalière, corporate, drone et événements. Résultats au-delà de vos attentes.">
+    <meta name="keywords" content="photographe Louvain-la-Neuve, photographe Brabant Wallon, photographie drone Belgique, photographe événement corporate, photo animalière Ardennes">
     <meta name="author" content="Brybry Photos">
     <meta name="robots" content="index, follow">
+
+    <!-- Géolocalisation -->
+    <meta name="geo.region" content="BE-WBR">
+    <meta name="geo.placename" content="Brabant Wallon, Belgique">
+    <meta name="geo.position" content="50.5985;4.5246">
+    <meta name="ICBM" content="50.5985, 4.5246">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Brybry Photos - Photographe Professionnel">
-    <meta property="og:description" content="Photographe professionnel spécialisé en mariages, portraits et photographie drone. Découvrez mon univers créatif et mes services sur-mesure.">
+    <meta property="og:title" content="Brybry Photos – Photographe Professionnel | Brabant Wallon">
+    <meta property="og:description" content="Photographe professionnel basé en Brabant Wallon. Animalière, corporate, drone et événements. Résultats au-delà de vos attentes.">
     <meta property="og:url" content="https://brybry0606.github.io">
     <meta property="og:site_name" content="Brybry Photos">
     <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="https://brybry0606.github.io/assets/authors.jpg">
+    <meta property="og:image:alt" content="Brybry Photos – Photographe professionnel en Brabant Wallon">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Brybry Photos - Photographe Professionnel">
-    <meta name="twitter:description" content="Photographe professionnel spécialisé en mariages, portraits et photographie drone.">
+    <meta name="twitter:title" content="Brybry Photos – Photographe Professionnel | Brabant Wallon">
+    <meta name="twitter:description" content="Photographe professionnel basé en Brabant Wallon. Animalière, corporate, drone et événements.">
+    <meta name="twitter:image" content="https://brybry0606.github.io/assets/authors.jpg">
+    <meta name="twitter:image:alt" content="Portrait du photographe Brybry Photos">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://brybry0606.github.io">
@@ -35,6 +45,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon.ico">
+
+    <!-- Preload first gallery image for LCP -->
+    <link rel="preload" as="image" href="./assets/0_small.jpg">
     
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -45,9 +58,14 @@
           "@type": "ProfessionalService",
           "@id": "https://brybry0606.github.io/#business",
           "name": "Brybry Photos",
-          "description": "Photographe professionnel spécialisé en mariages, portraits, photographie corporate et prises de vues aériennes par drone.",
+          "description": "Photographe professionnel basé à Louvain-la-Neuve (Brabant Wallon). Spécialisé en photographie animalière, corporate, drone et événements.",
           "url": "https://brybry0606.github.io",
-          "logo": "https://brybry0606.github.io/assets/favicon.ico",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://brybry0606.github.io/assets/authors.jpg",
+            "width": 800,
+            "height": 800
+          },
           "image": [
             "https://brybry0606.github.io/assets/0.jpg",
             "https://brybry0606.github.io/assets/1.jpg",
@@ -57,24 +75,34 @@
           "email": "bryan.bigneron06@gmail.com",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Bastogne",
-            "addressRegion": "Wallonie",
+            "addressLocality": "Brabant Wallon",
+            "addressRegion": "Brabant Wallon",
             "addressCountry": "BE"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "50.0039",
-            "longitude": "5.7206"
+            "latitude": "50.5985",
+            "longitude": "4.5246"
           },
           "priceRange": "$$",
           "sameAs": [
             "https://www.instagram.com/brybry_photos/",
             "https://wa.me/32487484872"
           ],
-          "areaServed": {
-            "@type": "Country",
-            "name": "Belgium"
-          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Louvain-la-Neuve"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Brabant Wallon"
+            },
+            {
+              "@type": "Country",
+              "name": "Belgium"
+            }
+          ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Services Photographiques",
@@ -85,7 +113,8 @@
                   "@type": "Service",
                   "name": "Photographie animalière",
                   "description": "Redécouvrez la faune à travers des photographies qui allient précision, émotion et authenticité.",
-                  "serviceType": "Wildlife Photography"
+                  "serviceType": "Wildlife Photography",
+                  "areaServed": "Belgium"
                 }
               },
               {
@@ -94,7 +123,8 @@
                   "@type": "Service",
                   "name": "Photographie d'entreprise",
                   "description": "Valorisez votre image professionnelle avec des photos d'entreprise de qualité. Portraits d'équipe, événements d'entreprise.",
-                  "serviceType": "Corporate Photography"
+                  "serviceType": "Corporate Photography",
+                  "areaServed": "Brabant Wallon"
                 }
               },
               {
@@ -103,7 +133,8 @@
                   "@type": "Service",
                   "name": "Photographie par Drone",
                   "description": "Prises de vues aériennes spectaculaires avec du matériel professionnel. Perspectives uniques garanties pour tous vos projets.",
-                  "serviceType": "Aerial Drone Photography"
+                  "serviceType": "Aerial Drone Photography",
+                  "areaServed": "Belgium"
                 }
               },
               {
@@ -112,7 +143,8 @@
                   "@type": "Service",
                   "name": "Photographie d'Événements",
                   "description": "Capturer l'atmosphère et les moments forts de vos événements privés ou professionnels. Soirées, inaugurations, célébrations, mariages.",
-                  "serviceType": "Event Photography"
+                  "serviceType": "Event Photography",
+                  "areaServed": "Brabant Wallon"
                 }
               }
             ]
@@ -127,44 +159,23 @@
           "review": [
             {
               "@type": "Review",
-              "author": {
-                "@type": "Person",
-                "name": "Maxime L."
-              },
+              "author": { "@type": "Person", "name": "Maxime L." },
               "datePublished": "2024-06",
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-              },
+              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
               "reviewBody": "Travail très pro, belles compositions et respect des délais. Je recommande sans hésiter."
             },
             {
               "@type": "Review",
-              "author": {
-                "@type": "Person",
-                "name": "Nathan R."
-              },
+              "author": { "@type": "Person", "name": "Nathan R." },
               "datePublished": "2025-05",
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-              },
+              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
               "reviewBody": "Sérieux, ponctuel et créatif. Le rendu des clichés est superbe, au-dessus de mes attentes."
             },
             {
               "@type": "Review",
-              "author": {
-                "@type": "Person",
-                "name": "Stéphanie N."
-              },
+              "author": { "@type": "Person", "name": "Stéphanie N." },
               "datePublished": "2024-03",
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-              },
+              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
               "reviewBody": "Magnifique perspective grâce au drone, je recommande."
             }
           ]
@@ -174,79 +185,81 @@
           "@id": "https://brybry0606.github.io/#website",
           "url": "https://brybry0606.github.io",
           "name": "Brybry Photos",
-          "description": "Site officiel de Brybry Photos - Photographe professionnel",
-          "publisher": {
-            "@id": "https://brybry0606.github.io/#business"
-          },
+          "description": "Site officiel de Brybry Photos – Photographe professionnel à Louvain-la-Neuve",
+          "publisher": { "@id": "https://brybry0606.github.io/#business" },
           "inLanguage": "fr-FR"
         },
         {
           "@type": "WebPage",
           "@id": "https://brybry0606.github.io/#webpage",
           "url": "https://brybry0606.github.io",
-          "name": "Brybry Photos - Photographe Professionnel",
-          "isPartOf": {
-            "@id": "https://brybry0606.github.io/#website"
-          },
-          "about": {
-            "@id": "https://brybry0606.github.io/#business"
-          },
-          "description": "Photographe professionnel spécialisé en mariages, portraits, photographie corporate et prises de vues aériennes par drone. Capturer vos moments précieux avec créativité et passion.",
+          "name": "Brybry Photos – Photographe Professionnel | Louvain-la-Neuve, Brabant Wallon",
+          "isPartOf": { "@id": "https://brybry0606.github.io/#website" },
+          "about": { "@id": "https://brybry0606.github.io/#business" },
+          "description": "Photographe professionnel basé à Louvain-la-Neuve. Animalière, corporate, drone, événements. Brabant Wallon, Belgique.",
           "inLanguage": "fr-FR"
         },
         {
           "@type": "ImageGallery",
           "name": "Galerie Photos Brybry Photos",
-          "description": "Portfolio de réalisations photographiques",
+          "description": "Portfolio de réalisations photographiques – Louvain-la-Neuve, Brabant Wallon",
           "image": [
-            "https://brybry0606.github.io/assets/0.jpg",
-            "https://brybry0606.github.io/assets/1.jpg",
-            "https://brybry0606.github.io/assets/2.jpg",
-            "https://brybry0606.github.io/assets/3.jpg",
-            "https://brybry0606.github.io/assets/4.jpg",
-            "https://brybry0606.github.io/assets/5.jpg",
-            "https://brybry0606.github.io/assets/6.jpg",
-            "https://brybry0606.github.io/assets/7.jpg",
-            "https://brybry0606.github.io/assets/8.jpg",
-            "https://brybry0606.github.io/assets/9.jpg",
-            "https://brybry0606.github.io/assets/10.jpg",
-            "https://brybry0606.github.io/assets/11.jpg",
-            "https://brybry0606.github.io/assets/12.jpg",
-            "https://brybry0606.github.io/assets/13.jpg",
-            "https://brybry0606.github.io/assets/14.jpg",
-            "https://brybry0606.github.io/assets/15.jpg"
+            "https://brybry0606.github.io/assets/0.jpg","https://brybry0606.github.io/assets/1.jpg",
+            "https://brybry0606.github.io/assets/2.jpg","https://brybry0606.github.io/assets/3.jpg",
+            "https://brybry0606.github.io/assets/4.jpg","https://brybry0606.github.io/assets/5.jpg",
+            "https://brybry0606.github.io/assets/6.jpg","https://brybry0606.github.io/assets/7.jpg",
+            "https://brybry0606.github.io/assets/8.jpg","https://brybry0606.github.io/assets/9.jpg",
+            "https://brybry0606.github.io/assets/10.jpg","https://brybry0606.github.io/assets/11.jpg",
+            "https://brybry0606.github.io/assets/12.jpg","https://brybry0606.github.io/assets/13.jpg",
+            "https://brybry0606.github.io/assets/14.jpg","https://brybry0606.github.io/assets/15.jpg"
           ]
         }
       ]
     }
     </script>
+
     <style>
+        /* ============================================================
+           CSS VARIABLES & RESET
+        ============================================================ */
+        :root {
+            --bg: #0a0a0a;
+            --bg-card: #111111;
+            --bg-input: #222222;
+            --bg-input-focus: #333333;
+            --color-primary: #ffffff;
+            --color-secondary: #cccccc;
+            --color-muted: #666666;
+            --color-stars: #ffd700;
+            --nav-bg: rgba(0,0,0,0.95);
+            --nav-bg-scrolled: rgba(0,0,0,0.98);
+            --transition-fast: 0.3s ease;
+            --transition-slide: 0.8s ease-in-out;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--color-primary);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Loading Animation */
+        /* ============================================================
+           LOADER
+        ============================================================ */
         .loader {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #0a0a0a;
+            inset: 0;
+            background: var(--bg);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -259,50 +272,52 @@
             visibility: hidden;
         }
 
-        .loader-content {
-            text-align: center;
-        }
+        .loader-content { text-align: center; }
 
         .loader-logo {
             font-size: 2rem;
             font-weight: bold;
             margin-bottom: 2rem;
             opacity: 0;
-            animation: fadeInPulse 2s ease-in-out;
+            animation: fadeInPulse 2s ease-in-out forwards;
         }
 
         .loader-spinner {
             width: 50px;
             height: 50px;
             border: 3px solid #333333;
-            border-top: 3px solid #ffffff;
+            border-top-color: var(--color-primary);
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin: 0 auto;
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            to { transform: rotate(360deg); }
         }
 
         @keyframes fadeInPulse {
-            0% { opacity: 0; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1.05); }
+            0%   { opacity: 0; transform: scale(0.8); }
+            50%  { opacity: 1; transform: scale(1.05); }
             100% { opacity: 1; transform: scale(1); }
         }
 
-        /* Navigation */
+        /* ============================================================
+           NAVIGATION
+           FIX: background toggled via CSS class instead of inline style
+        ============================================================ */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.95);
+            background: var(--nav-bg);
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 1rem 2rem;
-            transition: all 0.3s ease;
+            transition: background var(--transition-fast);
         }
+
+        nav.scrolled { background: var(--nav-bg-scrolled); }
 
         .nav-container {
             max-width: 1200px;
@@ -315,14 +330,12 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #ffffff;
+            color: var(--color-primary);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color var(--transition-fast);
         }
 
-        .logo:hover {
-            color: #cccccc;
-        }
+        .logo:hover { color: var(--color-secondary); }
 
         .nav-links {
             display: flex;
@@ -331,16 +344,14 @@
         }
 
         .nav-links a {
-            color: #ffffff;
+            color: var(--color-primary);
             text-decoration: none;
             font-weight: 300;
-            transition: all 0.3s ease;
+            transition: color var(--transition-fast);
             position: relative;
         }
 
-        .nav-links a:hover {
-            color: #cccccc;
-        }
+        .nav-links a:hover { color: var(--color-secondary); }
 
         .nav-links a::after {
             content: '';
@@ -349,13 +360,11 @@
             height: 1px;
             bottom: -5px;
             left: 0;
-            background-color: #ffffff;
-            transition: width 0.3s ease;
+            background-color: var(--color-primary);
+            transition: width var(--transition-fast);
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+        .nav-links a:hover::after { width: 100%; }
 
         .burger {
             display: none;
@@ -366,12 +375,14 @@
         .burger div {
             width: 25px;
             height: 2px;
-            background-color: #ffffff;
+            background-color: var(--color-primary);
             margin: 3px 0;
-            transition: 0.3s;
+            transition: var(--transition-fast);
         }
 
-        /* Hero Section with Parallax */
+        /* ============================================================
+           HERO
+        ============================================================ */
         .hero {
             height: 100vh;
             display: flex;
@@ -384,22 +395,19 @@
 
         .hero-video {
             position: absolute;
-            top: 0;
-            left: 0;
+            inset: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
             z-index: 1;
+            /* will-change removed — uniquement activé lors du scroll via JS */
         }
 
         .hero::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+            inset: 0;
+            background: rgba(0,0,0,0.4);
             z-index: 2;
         }
 
@@ -421,27 +429,29 @@
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
-            color: #cccccc;
+            color: var(--color-secondary);
         }
 
         .cta-button {
             display: inline-block;
             padding: 1rem 2rem;
             background: transparent;
-            border: 2px solid #ffffff;
-            color: #ffffff;
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all var(--transition-fast);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .cta-button:hover {
-            background: #ffffff;
+            background: var(--color-primary);
             color: #000000;
         }
 
-        /* Sections */
+        /* ============================================================
+           SECTIONS
+        ============================================================ */
         section {
             padding: 5rem 2rem;
             max-width: 1200px;
@@ -456,7 +466,9 @@
             letter-spacing: 1px;
         }
 
-        /* About Section */
+        /* ============================================================
+           ABOUT
+        ============================================================ */
         .about-content {
             display: grid;
             grid-template-columns: auto 2fr;
@@ -472,22 +484,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #666666;
+            color: var(--color-muted);
         }
 
         .about-text {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #cccccc;
+            color: var(--color-secondary);
         }
 
         .about-text h3 {
-            color: #ffffff;
+            color: var(--color-primary);
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
 
-        /* Gallery Section */
+        /* ============================================================
+           GALLERY
+           FIX: will-change retiré du CSS statique (activé/retiré en JS)
+        ============================================================ */
         .gallery {
             padding: 5rem 0;
             overflow: hidden;
@@ -508,67 +523,20 @@
             touch-action: pan-y pinch-zoom;
         }
 
-        /*Responsive*/
-        @media (max-width: 768px) {
-            .gallery-slider {
-                height: 300px;
-                margin: 0 1rem;
-            }
-            
-            .gallery-slide {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-            }
-        }
-
         .gallery-track {
             display: flex;
             height: 100%;
-            transition: transform 0.8s ease-in-out;
+            transition: transform var(--transition-slide);
         }
 
+        /* FIX: suppression de la double déclaration flex/height, will-change retiré */
         .gallery-slide {
-            flex: 0 0 100%;
-            height: 100%;
-            background: #1a1a1a;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666666;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
             flex: 0 0 100%;
             height: 100%;
             object-fit: cover;
             border-radius: inherit;
-            will-change: transform;
         }
 
-        .gallery-slide:hover {
-            transform: scale(1.02);
-            will-change: auto;
-        }
-
-        .gallery-slide::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.3);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .gallery-slide:hover::after {
-            opacity: 1;
-        }
-
-        /* Gallery indicators */
         .gallery-indicators {
             display: flex;
             justify-content: center;
@@ -582,19 +550,21 @@
             border-radius: 50%;
             background: #333333;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all var(--transition-fast);
         }
 
         .indicator.active {
-            background: #ffffff;
+            background: var(--color-primary);
             transform: scale(1.2);
         }
 
-        .indicator:hover {
-            background: #cccccc;
-        }
+        .indicator:hover { background: var(--color-secondary); }
 
-        /* Services Section */
+        /* ============================================================
+           SERVICES
+           FIX: --bg-image défini en HTML via data-image (pas de JS au load)
+                will-change sur ::before retiré
+        ============================================================ */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -602,35 +572,29 @@
         }
 
         .service-card {
-            background: #111111;
+            background: var(--bg-card);
             padding: 0;
             border-radius: 10px;
-            overflow-x: hidden;
+            overflow: hidden;
             position: relative;
             height: 220px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all var(--transition-fast);
         }
 
         .service-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             background-image: var(--bg-image);
             background-size: cover;
             background-position: center;
             opacity: 0;
-            transition: all 0.3s ease;
+            transition: opacity var(--transition-fast);
             z-index: 1;
-            will-change: opacity;
         }
 
-        .service-card:hover::before {
-            opacity: 1;
-        }
+        .service-card:hover::before { opacity: 1; }
 
         .service-content {
             position: relative;
@@ -641,25 +605,20 @@
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            background: #111111;
+            background: var(--bg-card);
             transition: transform 0.4s ease;
         }
 
-        .service-content h3 {
-            margin-top: 3rem;
-        }
+        .service-content h3 { margin-top: 3rem; }
+        .service-content p  { margin-bottom: 3rem; }
 
-        .service-content p {
-            margin-bottom: 3rem;
-        }
+        .service-card:hover .service-content { transform: translateX(90%); }
 
-        .service-card:hover .service-content {
-            transform: translateX(90%);
-        }
-
-        /* Testimonials Section */
+        /* ============================================================
+           TESTIMONIALS
+        ============================================================ */
         .testimonials {
-            background: #0a0a0a;
+            background: var(--bg);
             padding: 5rem 2rem;
         }
 
@@ -676,16 +635,14 @@
         }
 
         .testimonial-card {
-            background: #111111;
+            background: var(--bg-card);
             padding: 2rem;
             border-radius: 15px;
             position: relative;
-            transition: transform 0.3s ease;
+            transition: transform var(--transition-fast);
         }
 
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
+        .testimonial-card:hover { transform: translateY(-5px); }
 
         .testimonial-card::before {
             content: '"';
@@ -700,7 +657,7 @@
         .testimonial-text {
             font-style: italic;
             margin-bottom: 1.5rem;
-            color: #cccccc;
+            color: var(--color-secondary);
             line-height: 1.6;
         }
 
@@ -722,7 +679,7 @@
         }
 
         .author-info h4 {
-            color: #ffffff;
+            color: var(--color-primary);
             font-size: 1rem;
             margin-bottom: 0.25rem;
         }
@@ -732,10 +689,11 @@
             font-size: 0.9rem;
         }
 
-        .stars {
-            color: #ffd700;
-            margin-bottom: 1rem;
-        }
+        .stars { color: var(--color-stars); margin-bottom: 1rem; }
+
+        /* ============================================================
+           CONTACT
+        ============================================================ */
         .contact {
             background: #050505;
             padding: 5rem 2rem;
@@ -759,122 +717,35 @@
         }
 
         .contact-icon {
-            width: 50px;  
+            width: 50px;
             height: 50px;
-            display: flex;    
+            display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 1rem;
-            background: transparent; 
-            overflow: hidden;     
-            border-radius: 8px;    
+            background: transparent;
+            overflow: hidden;
+            border-radius: 8px;
         }
 
         .social_logo {
-            max-width: 90%;        
+            max-width: 90%;
             max-height: 90%;
-            object-fit: contain;     
+            object-fit: contain;
             display: block;
         }
 
         .contact-item a {
             position: relative;
-            color: #cccccc;
+            color: var(--color-secondary);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color var(--transition-fast);
             font-style: normal;
         }
 
-        .contact-item a:hover {
-            color: #ffffff;
-        }
+        .contact-item a:hover { color: var(--color-primary); }
 
         .contact-item a::after {
-            content: "";
-            position: absolute;
-            left: 0; bottom: -2px;
-            width: 100%; height: 2px;
-            background: currentColor;
-            transform: scaleX(0);
-            transform-origin: left center;
-            transition: transform .25s ease;
-        }
-
-        .contact-item a:hover::after {
-            transform: scaleX(1);
-        }
-
-        .contact-form {
-            background: #111111;
-            padding: 2rem;
-            border-radius: 10px;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #cccccc;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            background: #222222;
-            border: none;
-            border-radius: 5px;
-            color: #ffffff;
-            transition: background 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            background: #333333;
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: transparent;
-            border: 2px solid #ffffff;
-            color: #ffffff;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .submit-btn:hover {
-            background: #ffffff;
-            color: #000000;
-        }
-
-        /* Footer */
-        footer {
-            display: flex;
-            justify-content: space-around;
-            background: #000000;
-            padding: 2rem;
-            color: #666666;
-        }
-
-        #cryptexlink {
-            color: currentColor;
-            text-decoration: none;
-            position: relative;
-        }
-
-        #cryptexlink::after{
             content: "";
             position: absolute;
             left: 0;
@@ -887,20 +758,46 @@
             transition: transform .25s ease;
         }
 
-        #cryptexlink:hover::after {
-            transform: scaleX(1.0);
+        .contact-item a:hover::after { transform: scaleX(1); }
+
+        /* ============================================================
+           FOOTER
+        ============================================================ */
+        footer {
+            display: flex;
+            justify-content: space-around;
+            background: #000000;
+            padding: 2rem;
+            color: var(--color-muted);
         }
 
-        /* Animations */
+        #cryptexlink {
+            color: currentColor;
+            text-decoration: none;
+            position: relative;
+        }
+
+        #cryptexlink::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background: currentColor;
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform .25s ease;
+        }
+
+        #cryptexlink:hover::after { transform: scaleX(1); }
+
+        /* ============================================================
+           ANIMATIONS
+        ============================================================ */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         .fade-in {
@@ -914,15 +811,16 @@
             transform: translateY(0);
         }
 
-        /* Responsive */
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
         @media (max-width: 768px) {
             .nav-links {
-                display: flex;
                 position: fixed;
                 top: 70px;
                 right: 0;
                 width: 100%;
-                background: rgba(0, 0, 0, 0.95);
+                background: rgba(0,0,0,0.95);
                 flex-direction: column;
                 padding: 2rem;
                 text-align: center;
@@ -933,32 +831,16 @@
             }
 
             .nav-links.active {
-                display: flex;
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
             }
 
-            .burger {
-                display: flex;
-            }
+            .burger { display: flex; }
 
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
+            .hero h1      { font-size: 2.5rem; }
+            .hero p       { font-size: 1rem; padding: 0 1rem; }
+            .section-title { font-size: 2rem; }
 
             .hero-video {
                 width: 100vw;
@@ -966,14 +848,15 @@
                 object-fit: cover;
                 object-position: center;
             }
-    
-            .hero h1 {
-                font-size: 2.5rem;
+
+            .gallery-slider {
+                height: 300px;
+                margin: 0 1rem;
             }
-            
-            .hero p {
-                font-size: 1rem;
-                padding: 0 1rem;
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
 
             .about-image {
@@ -983,40 +866,139 @@
                 margin: 0 auto;
             }
         }
+        /* ============================================================
+           MENTIONS LÉGALES — onglet toggle
+        ============================================================ */
+        #main-content { display: block; }
+        #mentions-legales-content { display: none; }
 
+        body.mentions-active #main-content { display: none; }
+        body.mentions-active #mentions-legales-content { display: block; }
+
+        .mentions-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+            color: var(--color-secondary);
+            line-height: 1.8;
+        }
+
+        .mentions-page h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--color-primary);
+            margin-bottom: 3rem;
+            letter-spacing: 1px;
+        }
+
+        .mentions-page h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin: 2.5rem 0 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mentions-page p {
+            margin-bottom: 1rem;
+        }
+
+        .mentions-page a {
+            color: var(--color-primary);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .mentions-page .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 1px solid #444;
+            color: var(--color-secondary);
+            cursor: pointer;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+        }
+
+        .mentions-page .back-btn:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .mentions-separator {
+            border: none;
+            border-top: 1px solid #222;
+            margin: 2rem 0;
+        }
+
+        #mentions-link {
+            color: var(--color-muted);
+            text-decoration: none;
+            position: relative;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: inherit;
+            font-family: inherit;
+            padding: 0;
+        }
+
+        #mentions-link::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: -2px;
+            width: 100%; height: 1px;
+            background: currentColor;
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform .25s ease;
+        }
+
+        #mentions-link:hover { color: #999; }
+        #mentions-link:hover::after { transform: scaleX(1); }
     </style>
 </head>
 <body>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content">
+
     <!-- Loading Screen -->
-    <div class="loader">
+    <div class="loader" role="status" aria-label="Chargement en cours">
         <div class="loader-content">
             <div class="loader-logo">Brybry Photos</div>
             <div class="loader-spinner"></div>
         </div>
     </div>
+
     <!-- Navigation -->
     <nav role="navigation" aria-label="Navigation principale">
         <div class="nav-container">
             <a href="#home" class="logo" aria-label="Retour à l'accueil">Brybry Photos</a>
             <ul class="nav-links">
-                <li><a href="#home" aria-label="Aller à la section Accueil">Accueil</a></li>
-                <li><a href="#about" aria-label="Aller à la section À propos">À propos</a></li>
-                <li><a href="#gallery" aria-label="Aller à la section Galerie">Galerie</a></li>
-                <li><a href="#services" aria-label="Aller à la section Services">Services</a></li>
+                <li><a href="#home"        aria-label="Aller à la section Accueil">Accueil</a></li>
+                <li><a href="#about"       aria-label="Aller à la section À propos">À propos</a></li>
+                <li><a href="#gallery"     aria-label="Aller à la section Galerie">Galerie</a></li>
+                <li><a href="#services"    aria-label="Aller à la section Services">Services</a></li>
                 <li><a href="#testimonial" aria-label="Aller à la section Avis">Avis</a></li>
-                <li><a href="#contact" aria-label="Aller à la section Contact">Contact</a></li>
+                <li><a href="#contact"     aria-label="Aller à la section Contact">Contact</a></li>
             </ul>
             <div class="burger" aria-label="Menu mobile" role="button" tabindex="0">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div></div><div></div><div></div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header id="home" class="hero">
-        <video id="hero-video" class="hero-video" autoplay muted loop playsinline poster="./assets/hero-poster.jpg"></video>
+        <video id="hero-video" class="hero-video" autoplay muted loop playsinline poster="./assets/hero-poster_small.jpg"></video>
         <div class="hero-content">
             <h1>Brybry Photos</h1>
             <p>Capturer l'essence de vos moments précieux avec créativité et passion</p>
@@ -1028,87 +1010,91 @@
     <section id="about" aria-labelledby="about-title">
         <h2 id="about-title" class="section-title fade-in">À Propos</h2>
         <div class="about-content fade-in">
-            <img src="./assets/authors.jpg" class="about-image" role="img" aria-label="Portrait du photographe Brybry Photos">
+            <img src="./assets/authors_small.jpg" loading="lazy" class="about-image" alt="Portrait du photographe Brybry Photos">
             <div class="about-text">
                 <h3>Passionné par l'image depuis toujours</h3>
-                <p>Bienvenue dans mon univers photographique. Depuis plusieurs années, je me consacre à l'art de capturer les émotions et les instants uniques. Mon approche se base sur l'authenticité et la créativité, cherchant toujours à révéler la beauté naturelle de chaque moment.</p>
-                <p>Que ce soit pour immortaliser votre mariage, créer des portraits expressifs ou sublimer vos projets professionnels, je mets tout mon savoir-faire à votre service pour des images qui vous ressemblent parfaitement.</p>
+                <p>Bienvenue dans mon univers photographique. Basé en <strong>Brabant Wallon</strong>, je me consacre depuis plusieurs années à l'art de capturer les émotions et les instants uniques. Mon approche se base sur l'authenticité et la créativité, cherchant toujours à révéler la beauté naturelle de chaque moment.</p>
+                <p>Que ce soit pour sublimer vos projets professionnels, immortaliser vos événements ou explorer la faune belge sous un angle nouveau, je mets tout mon savoir-faire à votre service — en Brabant Wallon et partout en Belgique.</p>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Gallery Section
+         FIX: loading="lazy" en HTML natif sur tous les slides sauf le premier (déjà preloadé)
+    -->
     <section id="gallery" class="gallery" aria-labelledby="gallery-title">
         <h2 id="gallery-title" class="section-title fade-in">Mes réalisations</h2>
         <div class="gallery-container fade-in">
             <div class="gallery-slider" role="region" aria-label="Galerie de photos" aria-live="polite">
                 <div class="gallery-track">
-                    <img class="gallery-slide" src="./assets/0.jpg" alt="Photo 0">
-                    <img class="gallery-slide" src="./assets/1.jpg" alt="Photo 1">
-                    <img class="gallery-slide" src="./assets/2.jpg" alt="Photo 2">
-                    <img class="gallery-slide" src="./assets/3.jpg" alt="Photo 3">
-                    <img class="gallery-slide" src="./assets/4.jpg" alt="Photo 4">
-                    <img class="gallery-slide" src="./assets/5.jpg" alt="Photo 5">
-                    <img class="gallery-slide" src="./assets/6.jpg" alt="Photo 6">
-                    <img class="gallery-slide" src="./assets/7.jpg" alt="Photo 7">
-                    <img class="gallery-slide" src="./assets/8.jpg" alt="Photo 8">
-                    <img class="gallery-slide" src="./assets/9.jpg" alt="Photo 9">
-                    <img class="gallery-slide" src="./assets/10.jpg" alt="Photo 10">
-                    <img class="gallery-slide" src="./assets/11.jpg" alt="Photo 11">
-                    <img class="gallery-slide" src="./assets/12.jpg" alt="Photo 12">
-                    <img class="gallery-slide" src="./assets/13.jpg" alt="Photo 13">
-                    <img class="gallery-slide" src="./assets/14.jpg" alt="Photo 14">
-                    <img class="gallery-slide" src="./assets/15.jpg" alt="Photo 15">
+                    <img class="gallery-slide" src="./assets/0_small.jpg"  alt="Réalisation photographique 1">
+                    <img class="gallery-slide" src="./assets/1_small.jpg"  alt="Réalisation photographique 2"  loading="lazy">
+                    <img class="gallery-slide" src="./assets/2_small.jpg"  alt="Réalisation photographique 3"  loading="lazy">
+                    <img class="gallery-slide" src="./assets/3_small.jpg"  alt="Réalisation photographique 4"  loading="lazy">
+                    <img class="gallery-slide" src="./assets/4_small.jpg"  alt="Réalisation photographique 5"  loading="lazy">
+                    <img class="gallery-slide" src="./assets/5_small.jpg"  alt="Réalisation photographique 6"  loading="lazy">
+                    <img class="gallery-slide" src="./assets/6_small.jpg"  alt="Réalisation photographique 7"  loading="lazy">
+                    <img class="gallery-slide" src="./assets/7_small.jpg"  alt="Réalisation photographique 8"  loading="lazy">
+                    <img class="gallery-slide" src="./assets/8_small.jpg"  alt="Réalisation photographique 9"  loading="lazy">
+                    <img class="gallery-slide" src="./assets/9_small.jpg"  alt="Réalisation photographique 10" loading="lazy">
+                    <img class="gallery-slide" src="./assets/10_small.jpg" alt="Réalisation photographique 11" loading="lazy">
+                    <img class="gallery-slide" src="./assets/11_small.jpg" alt="Réalisation photographique 12" loading="lazy">
+                    <img class="gallery-slide" src="./assets/12_small.jpg" alt="Réalisation photographique 13" loading="lazy">
+                    <img class="gallery-slide" src="./assets/13_small.jpg" alt="Réalisation photographique 14" loading="lazy">
+                    <img class="gallery-slide" src="./assets/14_small.jpg" alt="Réalisation photographique 15" loading="lazy">
+                    <img class="gallery-slide" src="./assets/15_small.jpg" alt="Réalisation photographique 16" loading="lazy">
                 </div>
             </div>
             <div class="gallery-indicators" role="tablist" aria-label="Sélecteur de photos">
-                <div class="indicator active" data-slide="0" role="tab" aria-label="Photo 0" tabindex="0"></div>
-                <div class="indicator" data-slide="1" role="tab" aria-label="Photo 1" tabindex="0"></div>
-                <div class="indicator" data-slide="2" role="tab" aria-label="Photo 2" tabindex="0"></div>
-                <div class="indicator" data-slide="3" role="tab" aria-label="Photo 3" tabindex="0"></div>
-                <div class="indicator" data-slide="4" role="tab" aria-label="Photo 4" tabindex="0"></div>
-                <div class="indicator" data-slide="5" role="tab" aria-label="Photo 5" tabindex="0"></div>
-                <div class="indicator" data-slide="6" role="tab" aria-label="Photo 6" tabindex="0"></div>
-                <div class="indicator" data-slide="7" role="tab" aria-label="Photo 7" tabindex="0"></div>
-                <div class="indicator" data-slide="8" role="tab" aria-label="Photo 8" tabindex="0"></div>
-                <div class="indicator" data-slide="9" role="tab" aria-label="Photo 9" tabindex="0"></div>
-                <div class="indicator" data-slide="10" role="tab" aria-label="Photo 10" tabindex="0"></div>
-                <div class="indicator" data-slide="11" role="tab" aria-label="Photo 11" tabindex="0"></div>
-                <div class="indicator" data-slide="12" role="tab" aria-label="Photo 12" tabindex="0"></div>
-                <div class="indicator" data-slide="13" role="tab" aria-label="Photo 13" tabindex="0"></div>
-                <div class="indicator" data-slide="14" role="tab" aria-label="Photo 14" tabindex="0"></div>
-                <div class="indicator" data-slide="15" role="tab" aria-label="Photo 15" tabindex="0"></div>
+                <div class="indicator active" data-slide="0"  role="tab" aria-label="Photo 1"  tabindex="0"></div>
+                <div class="indicator"        data-slide="1"  role="tab" aria-label="Photo 2"  tabindex="0"></div>
+                <div class="indicator"        data-slide="2"  role="tab" aria-label="Photo 3"  tabindex="0"></div>
+                <div class="indicator"        data-slide="3"  role="tab" aria-label="Photo 4"  tabindex="0"></div>
+                <div class="indicator"        data-slide="4"  role="tab" aria-label="Photo 5"  tabindex="0"></div>
+                <div class="indicator"        data-slide="5"  role="tab" aria-label="Photo 6"  tabindex="0"></div>
+                <div class="indicator"        data-slide="6"  role="tab" aria-label="Photo 7"  tabindex="0"></div>
+                <div class="indicator"        data-slide="7"  role="tab" aria-label="Photo 8"  tabindex="0"></div>
+                <div class="indicator"        data-slide="8"  role="tab" aria-label="Photo 9"  tabindex="0"></div>
+                <div class="indicator"        data-slide="9"  role="tab" aria-label="Photo 10" tabindex="0"></div>
+                <div class="indicator"        data-slide="10" role="tab" aria-label="Photo 11" tabindex="0"></div>
+                <div class="indicator"        data-slide="11" role="tab" aria-label="Photo 12" tabindex="0"></div>
+                <div class="indicator"        data-slide="12" role="tab" aria-label="Photo 13" tabindex="0"></div>
+                <div class="indicator"        data-slide="13" role="tab" aria-label="Photo 14" tabindex="0"></div>
+                <div class="indicator"        data-slide="14" role="tab" aria-label="Photo 15" tabindex="0"></div>
+                <div class="indicator"        data-slide="15" role="tab" aria-label="Photo 16" tabindex="0"></div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section
+         FIX: style="--bg-image:url(...)" directement en HTML — aucun JS nécessaire au load
+    -->
     <section id="services" aria-labelledby="services-title">
         <h2 id="services-title" class="section-title fade-in">Mes Services Photographiques</h2>
         <div class="services-grid fade-in">
 
-            <article class="service-card" data-image="./assets/S1.jpg">
+            <article class="service-card" style="--bg-image: url('./assets/S1_small.jpg')">
                 <div class="service-content">
                     <h3>Photographie animalière</h3>
                     <p>Redécouvrez la faune à travers des photographies qui allient précision, émotion et authenticité.</p>
                 </div>
             </article>
 
-            <article class="service-card" data-image="./assets/S2.jpg">
+            <article class="service-card" style="--bg-image: url('./assets/S2_small.jpg')">
                 <div class="service-content">
-                    <h3>Photographie d’entreprise</h3>
-                    <p>Valorisez votre image professionnelle avec des photos d’entreprise de qualité. Portraits d'équipe, événements d'entreprise.</p>
+                    <h3>Photographie d'entreprise</h3>
+                    <p>Valorisez votre image professionnelle avec des photos d'entreprise de qualité. Portraits d'équipe, événements d'entreprise.</p>
                 </div>
             </article>
 
-            <article class="service-card" data-image="./assets/S3.jpg">
+            <article class="service-card" style="--bg-image: url('./assets/S3_small.jpg')">
                 <div class="service-content">
                     <h3>Photographie par Drone</h3>
                     <p>Prises de vues aériennes spectaculaires avec du matériel professionnel. Perspectives uniques garanties pour tous vos projets.</p>
                 </div>
             </article>
 
-            <article class="service-card" data-image="./assets/S4.jpg">
+            <article class="service-card" style="--bg-image: url('./assets/S4_small.jpg')">
                 <div class="service-content">
                     <h3>Photographie d'Événements</h3>
                     <p>Capturer l'atmosphère et les moments forts de vos événements privés ou professionnels. Soirées, inaugurations, célébrations, mariages.</p>
@@ -1122,11 +1108,10 @@
         <div class="testimonials-container">
             <h2 id="testimonials-title" class="section-title fade-in">Ce que disent mes clients</h2>
             <div class="testimonials-grid fade-in">
+
                 <article class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        Travail très pro, belles compositions et respect des délais. Je recommande sans hésiter.
-                    </p>
+                    <p class="testimonial-text">Travail très pro, belles compositions et respect des délais. Je recommande sans hésiter.</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">M</div>
                         <div class="author-info">
@@ -1135,12 +1120,10 @@
                         </div>
                     </div>
                 </article>
-                
+
                 <article class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        Sérieux, ponctuel et créatif. Le rendu des clichés est superbe, au-dessus de mes attentes.
-                    </p>
+                    <p class="testimonial-text">Sérieux, ponctuel et créatif. Le rendu des clichés est superbe, au-dessus de mes attentes.</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">N</div>
                         <div class="author-info">
@@ -1149,12 +1132,10 @@
                         </div>
                     </div>
                 </article>
-                
+
                 <article class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        Magnifique perspective grâce au drone, je recommande.
-                    </p>
+                    <p class="testimonial-text">Magnifique perspective grâce au drone, je recommande.</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">S</div>
                         <div class="author-info">
@@ -1163,34 +1144,44 @@
                         </div>
                     </div>
                 </article>
+
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact" aria-labelledby="contact-title">
         <h2 id="contact-title" class="section-title fade-in">Me Contacter</h2>
         <div class="contact-content fade-in">
             <div class="contact-info">
                 <h3>Parlons de votre projet photographique</h3>
-                <p style="margin-bottom: 2rem; color: #cccccc; line-height: 1.6;">
-                    Contactez-moi directement via vos moyens de communication préférés. 
+                <p style="margin-bottom: 2rem; color: var(--color-secondary); line-height: 1.6;">
+                    Contactez-moi directement via vos moyens de communication préférés.
                     Je réponds rapidement et je serais ravi de discuter de votre projet photo.
                 </p>
                 <address>
                     <div class="contact-item">
-                        <div class="contact-icon" aria-hidden="true"><img alt="Logo email" class="social_logo" src="./assets/email_logo.png"></div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <img alt="" class="social_logo" src="./assets/email_logo.png" loading="lazy">
+                        </div>
                         <a href="mailto:bryan.bigneron06@gmail.com" aria-label="M'envoyer un email">Me contacter via email</a>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon" aria-hidden="true"><img alt="Logo téléphone" class="social_logo" src="./assets/call.png "></div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <img alt="" class="social_logo" src="./assets/call.png" loading="lazy">
+                        </div>
                         <a href="tel:+32487484872" aria-label="M'appeler">+32 487 48 48 72</a>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon" aria-hidden="true"><img alt="Logo whatsapp" class="social_logo" src="./assets/logo_whatsapp.png"></div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <img alt="" class="social_logo" src="./assets/logo_whatsapp.png" loading="lazy">
+                        </div>
                         <a href="https://wa.me/32487484872" target="_blank" rel="noopener noreferrer" aria-label="Me contacter via WhatsApp">Me contacter via WhatsApp</a>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon" aria-hidden="true"><img alt="Logo instagram" class="social_logo" src="./assets/instagram_logo.png"></div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <img alt="" class="social_logo" src="./assets/instagram_logo.png" loading="lazy">
+                        </div>
                         <a href="https://www.instagram.com/brybry_photos/" target="_blank" rel="noopener noreferrer" aria-label="Me suivre sur Instagram">Me suivre sur Instagram</a>
                     </div>
                 </address>
@@ -1200,392 +1191,334 @@
 
     <!-- Footer -->
     <footer role="contentinfo">
-        <p>&copy; 2025 Brybry Photos | Photographe Professionnel. Tous droits réservés. </p><a id="cryptexlink" href="https://cryptexhq.github.io">Site réalisé par Cryptex</a>
+        <p>&copy; 2025 Brybry Photos | Photographe Professionnel. Tous droits réservés.</p>
+        <div style="display:flex; gap: 1.5rem; align-items: center;">
+            <button id="mentions-link" onclick="toggleMentions(true)" aria-label="Lire les mentions légales">Mentions légales</button>
+            <a id="cryptexlink" href="https://cryptexhq.github.io">Site réalisé par Cryptex</a>
+        </div>
     </footer>
 
-    <!-- HLS.js Library -->
+    </div><!-- /#main-content -->
+
+    <!-- ============================================================
+         MENTIONS LÉGALES
+    ============================================================ -->
+    <div id="mentions-legales-content" role="main" aria-label="Mentions légales">
+        <nav role="navigation" aria-label="Navigation mentions légales" style="position:fixed;top:0;width:100%;background:rgba(0,0,0,0.98);backdrop-filter:blur(10px);z-index:1000;padding:1rem 2rem;">
+            <div class="nav-container">
+                <span class="logo">Brybry Photos</span>
+            </div>
+        </nav>
+        <div class="mentions-page">
+            <button class="back-btn" onclick="toggleMentions(false)" aria-label="Retour au site">
+                ← Retour au site
+            </button>
+
+            <h1>Mentions Légales</h1>
+
+            <h2>1. Éditeur du site</h2>
+            <p>
+                <strong>Nom commercial :</strong> Brybry Photos<br>
+                <strong>Statut :</strong> Indépendant <em>[à compléter]</em><br>
+                <strong>Numéro BCE :</strong> <em>[à compléter]</em><br>
+                <strong>Adresse :</strong> Louvain-la-Neuve, Brabant Wallon, Belgique<br>
+                <strong>Téléphone :</strong> <a href="tel:+32487484872">+32 487 48 48 72</a><br>
+                <strong>Email :</strong> <a href="mailto:bryan.bigneron06@gmail.com">bryan.bigneron06@gmail.com</a>
+            </p>
+
+            <hr class="mentions-separator">
+
+            <h2>2. Hébergement</h2>
+            <p>
+                Ce site est hébergé par <strong>GitHub Pages</strong>, un service de GitHub, Inc.<br>
+                88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.<br>
+                <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">https://pages.github.com</a>
+            </p>
+
+            <hr class="mentions-separator">
+
+            <h2>3. Propriété intellectuelle</h2>
+            <p>
+                L'ensemble du contenu de ce site (textes, photographies, vidéos, logos) est la propriété exclusive de Brybry Photos, sauf mention contraire. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est strictement interdite.
+            </p>
+            <p>
+                Les photographies publiées sur ce site ont été réalisées par Bryan Bigneron. Toute utilisation commerciale ou non commerciale sans accord est susceptible de constituer une contrefaçon au sens de la loi belge sur le droit d'auteur.
+            </p>
+
+            <hr class="mentions-separator">
+
+            <h2>4. Protection des données personnelles (RGPD)</h2>
+            <p>
+                Ce site ne collecte aucune donnée personnelle via formulaire. Les données transmises lors d'un contact direct (email, téléphone, WhatsApp) sont utilisées uniquement dans le cadre de la relation commerciale et ne sont jamais cédées à des tiers.
+            </p>
+            <p>
+                Conformément au Règlement Général sur la Protection des Données (RGPD – UE 2016/679), vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ce droit : <a href="mailto:bryan.bigneron06@gmail.com">bryan.bigneron06@gmail.com</a>.
+            </p>
+
+            <hr class="mentions-separator">
+
+            <h2>5. Cookies</h2>
+            <p>
+                Ce site n'utilise pas de cookies de traçage ou d'analyse. Aucune donnée de navigation n'est collectée ni transmise à des tiers.
+            </p>
+
+            <hr class="mentions-separator">
+
+            <h2>6. Limitation de responsabilité</h2>
+            <p>
+                Brybry Photos s'efforce d'assurer l'exactitude des informations présentes sur ce site mais ne peut garantir leur exhaustivité. L'éditeur ne saurait être tenu responsable des dommages directs ou indirects résultant de l'utilisation du site.
+            </p>
+
+            <hr class="mentions-separator">
+
+            <h2>7. Droit applicable</h2>
+            <p>
+                Le présent site et ses mentions légales sont soumis au droit belge. Tout litige relatif à son utilisation sera de la compétence exclusive des tribunaux compétents de Belgique.
+            </p>
+
+            <hr class="mentions-separator">
+            <p style="font-size:0.85rem; color:#555; margin-top: 2rem;">Dernière mise à jour : mars 2026</p>
+        </div>
+    </div>
+
+    <!-- HLS.js -->
+    <!-- HLS.js -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
     <script>
-        // HLS Video Player
+    /* ================================================================
+       HLS VIDEO PLAYER
+    ================================================================ */
+    (function () {
         const video = document.getElementById('hero-video');
-        const videoSrc = './assets/master.m3u8';
+        const src   = './assets/master.m3u8';
 
         if (Hls.isSupported()) {
-            const hls = new Hls({
-                enableWorker: true,
-                lowLatencyMode: false,
-                backBufferLength: 90
-            });
-
-            hls.startLevel = 1;
-            
-            hls.loadSource(videoSrc);
+            const hls = new Hls({ enableWorker: true, lowLatencyMode: false, backBufferLength: 90, startLevel: 1 });
+            hls.loadSource(src);
             hls.attachMedia(video);
-            
-            hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                video.play().catch(e => console.log('Autoplay prevented:', e));
+            hls.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(() => {}));
+            hls.on(Hls.Events.ERROR, (_, data) => {
+                if (!data.fatal) return;
+                if (data.type === Hls.ErrorTypes.NETWORK_ERROR) hls.startLoad();
+                else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) hls.recoverMediaError();
+                else hls.destroy();
             });
-            
-            hls.on(Hls.Events.ERROR, function(event, data) {
-                if (data.fatal) {
-                    switch(data.type) {
-                        case Hls.ErrorTypes.NETWORK_ERROR:
-                            console.error('Network error, trying to recover...');
-                            hls.startLoad();
-                            break;
-                        case Hls.ErrorTypes.MEDIA_ERROR:
-                            console.error('Media error, trying to recover...');
-                            hls.recoverMediaError();
-                            break;
-                        default:
-                            console.error('Fatal error, destroying HLS instance');
-                            hls.destroy();
-                            break;
-                    }
-                }
-            });
-        }
-        // Safari native HLS support
-        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = videoSrc;
-            video.addEventListener('loadedmetadata', function() {
-                video.play().catch(e => console.log('Autoplay prevented:', e));
-            });
-        }
-        // Fallback for unsupported browsers
-        else {
-            console.error('HLS not supported, using fallback');
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = src;
+            video.addEventListener('loadedmetadata', () => video.play().catch(() => {}));
+        } else {
             video.src = './assets/hero-video.mp4';
         }
-    </script>
-    <script>
-//===========================================================+
-//      Loader
-//===========================================================+
-        window.addEventListener('load', () => {
-            const loader = document.querySelector('.loader');
-            setTimeout(() => {
-                loader.classList.add('fade-out');
-            }, 1000); // Show loader for 1 second minimum
-        });
+    })();
 
+    /* ================================================================
+       LOADER
+    ================================================================ */
+    const loaderEl = document.querySelector('.loader');
 
-//===========================================================+
-//      Perfs optimisation
-//===========================================================+
-        function preloadAllAssets() {
-            const allImages = new Set();
-            
-            document.querySelectorAll('img').forEach(img => {
-                if (img.src) allImages.add(img.src);
-            });
-            
-            document.querySelectorAll('[data-image]').forEach(el => {
-                allImages.add(el.dataset.image);
-            });
-            
-            const additionalImages = [
-                './assets/authors.jpg',
-                './assets/email_logo.png',
-                './assets/call.png',
-                './assets/logo_whatsapp.png',
-                './assets/instagram_logo.png'
-            ];
-            additionalImages.forEach(src => allImages.add(src));
-            
-            allImages.forEach(src => {
-                const img = new Image();
-                img.src = src;
-            });
-        }
+    function hideLoader() {
+        if (!loaderEl) return;
+        loaderEl.style.opacity = '0';
+        loaderEl.style.visibility = 'hidden';
+        loaderEl.style.pointerEvents = 'none';
+    }
 
-        preloadAllAssets() 
-        if ('loading' in HTMLImageElement.prototype) {
-            document.querySelectorAll('img').forEach(img => {
-                img.loading = 'lazy';
-            });
-        }
+    setTimeout(hideLoader, 800);
 
-/*        const servicesObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              document.querySelectorAll('.service-card[data-image]').forEach(card => {
-                const img = new Image();
-                img.onload = () => {
-                  card.style.setProperty('--bg-image', `url(${card.dataset.image})`);
-                  card.classList.add('preloaded');
-                };
-                img.src = card.dataset.image;
-              });
-              servicesObserver.unobserve(entry.target);
-            }
-          });
-        }, { rootMargin: '200px' });
+    /* ================================================================
+       MENTIONS LÉGALES — toggle
+    ================================================================ */
+    function toggleMentions(show) {
+        document.body.classList.toggle('mentions-active', show);
+        window.scrollTo(0, 0);
+    }
 
-        servicesObserver.observe(document.getElementById('services'));
-*/
+    /* ================================================================
+       NAVIGATION — scroll class + burger
+    ================================================================ */
+    const nav      = document.querySelector('nav');
+    const burger   = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
 
-//===========================================================+
-//      Website animation
-//===========================================================+
-// Parallaxe animation       
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    const scrolled = window.pageYOffset;
-                    const heroVideo = document.querySelector('.hero-video');
-                    const rate = scrolled * -0.2;
-                    
-                    if (heroVideo) {
-                        heroVideo.style.transform = `translateY(${rate}px)`;
-                    }
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 100);
+    }, { passive: true });
 
-        const burger = document.querySelector('.burger');
-        const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        burger.classList.toggle('active');
+    });
 
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            burger.classList.toggle('active');
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-                // Close mobile menu after click
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Service animation
-        document.querySelectorAll('.service-card').forEach(card => {
-            const imageSrc = card.dataset.image;
-            card.style.setProperty('--bg-image', `url(${imageSrc})`);
-            
-            let isToggled = false;
-            
-            card.addEventListener('click', (e) => {
-                e.stopPropagation();
-
-                if (window.innerWidth <= 768) {
-                    const serviceContent = card.querySelector('.service-content');
-                    
-                    if (isToggled) {
-                        serviceContent.style.transform = 'translateX(0%)';
-                        isToggled = false;
-                    } else {
-                        serviceContent.style.transform = 'translateX(90%)';
-                        isToggled = true;
-                    }
-                    
-                    document.querySelectorAll('.service-card').forEach(otherCard => {
-                        if (otherCard !== card) {
-                            const otherContent = otherCard.querySelector('.service-content');
-                            otherContent.style.transform = 'translateX(0%)';
-                        }
-                    });
-                }
-            });
-            
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 768) {
-                    const serviceContent = card.querySelector('.service-content');
-                    serviceContent.style.transform = '';
-                    isToggled = false;
-                }
-            });
-        });
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-
-//===========================================================+
-//      Gallery slide avec préchargement
-//===========================================================+
-        // Préchargement des images
-        const galleryImages = [
-            './assets/0.jpg',
-            './assets/1.jpg',
-            './assets/2.jpg',
-            './assets/3.jpg',
-            './assets/4.jpg',
-            './assets/5.jpg',
-            './assets/6.jpg',
-            './assets/7.jpg',
-            './assets/8.jpg',
-            './assets/9.jpg',
-            './assets/10.jpg',
-            './assets/11.jpg',
-            './assets/12.jpg',
-            './assets/13.jpg',
-            './assets/14.jpg',
-            './assets/15.jpg'
-        ];
-        
-        let preloadedImages = new Set();
-        
-        function preloadImage(src) {
-            if (preloadedImages.has(src)) return;
-            const img = new Image();
-            img.onload = () => preloadedImages.add(src);
-            img.src = src;
-        }
-        
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.gallery-slide');
-        const indicators = document.querySelectorAll('.indicator');
-        const totalSlides = slides.length;
-        let slideInterval;
-        const track = document.querySelector('.gallery-track');
-
-        function showSlide(index) {
-            document.querySelectorAll('.indicator').forEach(indicator => {
-                indicator.classList.remove('active');
-            });
-            
-            track.style.transform = `translateX(-${index * 100}%)`;
-            
-            document.querySelectorAll('.indicator')[index].classList.add('active');
-            
-            currentSlide = index;
-            
-            const nextIndex = (index + 1) % totalSlides;
-            const nextNextIndex = (index + 2) % totalSlides;
-            preloadImage(galleryImages[nextIndex]);
-            preloadImage(galleryImages[nextNextIndex]);
-        }
-        
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-               currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-               showSlide(currentSlide);
-           }
-        
-        // Manual navigation with indicators
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                showSlide(index);
-            });
-        });
-        
-        // Lazy loading        
-        const galleryObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    galleryImages.forEach(src => preloadImage(src));
-                    galleryObserver.unobserve(entry.target);
-                }
-            });
-        }, { rootMargin: '100px' });
-        
-        galleryObserver.observe(document.getElementById('gallery'));
-
-
-//===========================================================+
-//      Touch slide
-//===========================================================+
-
-        let startX = 0;
-        let currentX = 0;
-        let isDragging = false;
-
-        track.addEventListener("pointerdown", (e) => {
-            startX = e.clientX;
-            currentX = e.clientX;
-            isDragging = true;
-            track.style.transition = 'none';
-            track.setPointerCapture(e.pointerId);
-        }, { passive: false });
-
-        track.addEventListener("pointermove", (e) => {
-            if (!isDragging) return;
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
-            currentX = e.clientX;
-            const diff = currentX - startX;
-            const currentOffset = -currentSlide * 100;
-            const dragPercent = (diff / track.offsetWidth) * 100;
-            
-            track.style.transform = `translateX(${currentOffset + dragPercent}%)`;
-        }, { passive: false });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            navLinks.classList.remove('active');
+        });
+    });
 
-        track.addEventListener("pointerup", (e) => {
-            if (!isDragging) return;
-            
-            track.releasePointerCapture(e.pointerId);
-            track.style.transition = 'transform 0.8s ease-in-out';
-            
-            const diffX = currentX - startX;
-            const threshold = track.offsetWidth * 0.15;
-            
-            if (diffX > threshold) {
-                prevSlide();
-            } else if (diffX < -threshold) {
-                nextSlide();
-            } else {
+    /* ================================================================
+       PARALLAX HERO
+    ================================================================ */
+    const heroVideo = document.querySelector('.hero-video');
+    let parallaxTicking = false;
+    let parallaxTimer;
 
-                showSlide(currentSlide);
-            }
-            
-            isDragging = false;
-            startX = 0;
-            currentX = 0;
-        }, { passive: false });
+    window.addEventListener('scroll', () => {
+        if (!parallaxTicking) {
+            requestAnimationFrame(() => {
+                heroVideo.style.transform = `translateY(${window.pageYOffset * -0.2}px)`;
+                parallaxTicking = false;
+            });
+            parallaxTicking = true;
+        }
+        heroVideo.style.willChange = 'transform';
+        clearTimeout(parallaxTimer);
+        parallaxTimer = setTimeout(() => { heroVideo.style.willChange = 'auto'; }, 200);
+    }, { passive: true });
 
-        track.addEventListener("pointercancel", (e) => {
-            if (isDragging) {
-                track.releasePointerCapture(e.pointerId);
-                track.style.transition = 'transform 0.8s ease-in-out';
-                showSlide(currentSlide);
-                isDragging = false;
-            }
+    /* ================================================================
+       SERVICE CARDS — mobile toggle
+    ================================================================ */
+    document.querySelectorAll('.service-card').forEach(card => {
+        let isToggled = false;
+
+        card.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (window.innerWidth > 768) return;
+            const content = card.querySelector('.service-content');
+            isToggled = !isToggled;
+            content.style.transform = isToggled ? 'translateX(90%)' : '';
+            document.querySelectorAll('.service-card').forEach(other => {
+                if (other === card) return;
+                other.querySelector('.service-content').style.transform = '';
+                other._toggled = false;
+            });
         });
 
-
-//===========================================================+
-//      Navigation scroll style 
-//===========================================================+
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(0, 0, 0, 0.98)';
-            } else {
-                nav.style.background = 'rgba(0, 0, 0, 0.95)';
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                card.querySelector('.service-content').style.transform = '';
+                isToggled = false;
             }
         });
+    });
+
+    /* ================================================================
+       FADE-IN ON SCROLL
+    ================================================================ */
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+    /* ================================================================
+       GALLERY SLIDER
+    ================================================================ */
+    const track       = document.querySelector('.gallery-track');
+    const indicators  = document.querySelectorAll('.indicator');
+    const totalSlides = document.querySelectorAll('.gallery-slide').length;
+    let currentSlide  = 0;
+    let autoplayTimer;
+
+    const AUTOPLAY_DELAY = 4000;
+
+    function preloadSlide(index) {
+        const slides = document.querySelectorAll('.gallery-slide');
+        const img = slides[index];
+        if (img && img.loading === 'lazy') img.loading = 'eager';
+    }
+
+    function showSlide(index) {
+        track.style.willChange = 'transform';
+        track.style.transition = 'transform 0.8s ease-in-out';
+        track.style.transform  = `translateX(-${index * 100}%)`;
+        indicators.forEach((ind, i) => ind.classList.toggle('active', i === index));
+        currentSlide = index;
+        track.addEventListener('transitionend', () => {
+            track.style.willChange = 'auto';
+        }, { once: true });
+        preloadSlide((index + 1) % totalSlides);
+        preloadSlide((index + 2) % totalSlides);
+    }
+
+    function nextSlide() { showSlide((currentSlide + 1) % totalSlides); }
+    function prevSlide()  { showSlide((currentSlide - 1 + totalSlides) % totalSlides); }
+
+    function startAutoplay() {
+        stopAutoplay();
+        autoplayTimer = setInterval(nextSlide, AUTOPLAY_DELAY);
+    }
+
+    function stopAutoplay() { clearInterval(autoplayTimer); }
+
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            showSlide(index);
+            startAutoplay();
+        });
+    });
+
+    const galleryAutoplayObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) startAutoplay();
+            else stopAutoplay();
+        });
+    }, { threshold: 0.3 });
+
+    galleryAutoplayObserver.observe(document.getElementById('gallery'));
+
+    track.addEventListener('mouseenter', stopAutoplay);
+    track.addEventListener('mouseleave', startAutoplay);
+
+    /* ================================================================
+       TOUCH / POINTER DRAG
+    ================================================================ */
+    let startX = 0, currentX = 0, isDragging = false;
+
+    track.addEventListener('pointerdown', (e) => {
+        startX = currentX = e.clientX;
+        isDragging = true;
+        track.style.transition = 'none';
+        track.setPointerCapture(e.pointerId);
+        stopAutoplay();
+    }, { passive: false });
+
+    track.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        currentX = e.clientX;
+        const dragPercent = ((currentX - startX) / track.offsetWidth) * 100;
+        track.style.transform = `translateX(${-(currentSlide * 100) + dragPercent}%)`;
+    }, { passive: false });
+
+    track.addEventListener('pointerup', (e) => {
+        if (!isDragging) return;
+        track.releasePointerCapture(e.pointerId);
+        track.style.transition = '';
+        const diff      = currentX - startX;
+        const threshold = track.offsetWidth * 0.15;
+        if      (diff >  threshold) prevSlide();
+        else if (diff < -threshold) nextSlide();
+        else                        showSlide(currentSlide);
+        isDragging = false;
+        startAutoplay();
+    }, { passive: false });
+
+    track.addEventListener('pointercancel', (e) => {
+        if (!isDragging) return;
+        track.releasePointerCapture(e.pointerId);
+        track.style.transition = '';
+        showSlide(currentSlide);
+        isDragging = false;
+        startAutoplay();
+    }, { passive: false });
+
     </script>
 </body>
 </html>
